@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="post" class="w-50 m-auto">
+    <h1>{{type}} Password</h1>
+    <!-- {{form|crispy}} -->
+     {% for i in form %}
+     {{ i.label_tag }}
+     {{ i }}
+     {{ i.errors }}
+     {% endfor %}
+    <button class="btn btn-success mt-2">Submit</button>
+</form>
+{% endblock content %}

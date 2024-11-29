@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Profile</title>
+{% endblock title %}
+{% block content %}
+<div class="text-center">
+    <h1>This is profile</h1>
+    <a href="{% url "pass_change" %}" class="btn btn-warning">Change Password with previous</a>
+    <a href="{% url "pass_reset" %}" class="btn btn-warning">Reset Password</a>
+</div>
+{% endblock content %}
